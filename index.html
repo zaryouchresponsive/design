@@ -1,0 +1,562 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no Enseimum-scale=1, user-scalable=no">
+    <!-- Bootstrap CSS -->
+    <link   rel="stylesheet" 
+            href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+            crossorigin="anonymous">
+    <script src="https://kit.fontawesome.com/ac3b2c6be3.js" 
+            crossorigin="anonymous">
+    </script>
+    <title> E-commerce </title>
+  </head>
+  <body>
+
+        <!-- Début de la barre de navigation -->
+        <!-- La classe navbar var rendre notre menu flexible -->
+        <!-- La classe navbar-expand-md permet de rendre notre barre de navigation RESPONSIVE -->
+        <!-- md = medium, navbar-light permet de changer la couleur -->
+        <!-- bg-dark permet d'avoir la couleur grise très foncée pour la barre de navigation -->
+        <!-- bg-dark est une couleur prédéfinie de bootstrap, à utiliser suite à navbar-light -->
+        <nav class="navbar navbar-expand-md navbar-light" style="background-color: lightslategray;">
+
+                <!-- Bootstrap permet d'utiliser des couleurs prédéfinies comme bg-dark :-->
+                <!-- fas est une classe qui fournit des icônes -->
+                <!-- La propriété fa-anchor permet d'afficher une icône parmis les icônes de Bootstrap -->
+                <!-- text-warning permet d'avoir une couleur jaune -->
+                <!-- fa-2x permet d'augmenter la taille de l'icône -->
+                <a href="#"> <i class="fas fa-anchor text-warning fa-2x"> </i> </a>
+
+                <!-- le bouton suivant permet de gérer la disparition des titres des menus et la zone de recherche : -->
+                <!-- Et la classe navbar-toggler-ico permet utilisée avec la balise <span>, permet d'afficher une icône -->
+                <!-- qui représente l'ensemble des menus appelé le menu hambourguer : -->                        
+                <!-- Et pour rendre le bouton élégant, on va utiliser navbar-toggler :-->
+                <!-- data-toggle permet de réagir avec le menu Hambourguer : -->
+                <!-- data-target permet de réagir avec l'id de nav qui est utilisé en bas par la suite -->
+                <!-- avec la section <div>, ce qui permet de faire apparaître ou disparaître les titres des menus. -->
+                <!-- De toute faào, vous devez utiliser les deux à la fois : data-toggle et data-target.-->
+                <button type="button" class="navbar-toggler bg-light" 
+                        data-toggle="collapse" data-target="#nav">
+                        <span class="navbar-toggler-icon"> </span>
+                </button>
+                        
+                <!-- La classe collapse va nous permettre de faire disparaître les titres des menus et la zone de recherche : -->
+                <!-- quand on réduit la fenêtre du navigateur, question de responsive : -->
+                <!-- Notez bien que navbar-collapse est directement liée à navbar-expand-md. -->
+                <!-- Mettez lg (Large) à la place de md (Medium) et vous allez remarquer les changements -->
+                <!-- justify-content-between permet d'espacer entre les éléments de la barre de navigation, -->
+                <!-- à savoir : le logo, les titres des menus et la zone de recherche tout en commençant par -->
+                <!-- les éléments gauche et droit puis celui du milieu -->
+                <div class="collapse navbar-collapse justify-content-between" id="nav"> 
+                <ul class="navbar-nav">
+
+                        <!-- la classe nav-item permet de rendre l'élément à afficher ded type navigation -->
+                        <!-- la classe nav-link permet de rendre le lien de type lien de navigation : -->
+                        <!-- La propriété text-light permet d'avoir une couleur grise claire : -->
+                        <!-- La propriété font-weight-bold permet d'avoir un caractère en gras : -->
+                        <!-- La propriété text-uppercase permet d'afficher le texte en majuscule : -->
+                        <!-- px-3 permet d'ajouter un padding à droite et à gauche du titre du menu : -->
+                        <li class="nav-item"> 
+                                <a class="nav-link text-light font-weight-bold text-uppercase px-3" 
+                                        href="#"> Accueil 
+                                </a>
+                        </li>
+
+                        <!-- La classe nav-item permet de préparer les éléments du menu : -->
+                        <!-- La propriété dropdown permet d'aligner verticalement les éléments d'un menu : -->
+                        <li class="nav-item dropdown"> 
+                                <!-- Pour faire fonctionner à 100% le menu, on utilise l'attribut data-toggle : -->                
+                                <a      class="nav-link text-light font-weight-bold text-uppercase px-3 
+                                        dropdown-toggle"
+                                        data-toggle="dropdown" href="#"> Competences
+                                </a> 
+
+                                <!-- La classe dropdown-menu permet de faire disparaître les éléments du menu -->
+                                <div class="dropdown-menu"> 
+                                        <!-- la classe dropdown-menu permet de préparer le s éléments du menu :-->
+                                        <a class="dropdown-item" href="#"> HTML </a>
+                                        <a class="dropdown-item" href="#"> CSS </a>
+                                        <a class="dropdown-item "href="#"> JavaScript </a>
+                                        <a class="dropdown-item" href="#">  PHP </a>
+                                </div>
+                        </li>
+                
+                        <!-- La classe nav-item permet de préparer les éléments du menu : -->
+                        <!-- La propriété dropdown permet d'aligner verticalement les éléments d'un menu : -->
+                        <li class="nav-item dropdown"> 
+
+                                <!-- Pour faire fonctionner à 100% le menu, on utilise l'attribut data-toggle : -->                
+                                <a      class="nav-link text-light font-weight-bold text-uppercase px-3 
+                                        dropdown-toggle"
+                                        data-toggle="dropdown" href="#">Projets
+                                </a> 
+                                <!-- La classe dropdown-menu permet de faire disparaître les éléments du menu -->
+                                <div class="dropdown-menu"> 
+                                        <!-- la classe dropdown-menu permet de préparer le s éléments du menu :-->
+                                        <a class="dropdown-item" href="#"> E-learning </a>
+                                        <a class="dropdown-item" href="#"> E-Commerce </a>
+                                        <a class="dropdown-item "href="#"> Application Web </a>
+                                        <a class="dropdown-item" href="#">  CRM </a>
+                                </div>
+                        </li>
+
+                        <!-- La classe nav-item permet de préparer les éléments du menu : -->
+                        <!-- La propriété dropdown permet d'aligner verticalement les éléments d'un menu : -->
+                        <li class="nav-item dropdown"> 
+                                <!-- Pour faire fonctionner à 100% le menu, on utilise l'attribut data-toggle : -->                
+                                <a      class="nav-link text-light font-weight-bold text-uppercase px-3 
+                                        dropdown-toggle"
+                                        data-toggle="dropdown" href="#"> Equipe
+                                </a> 
+
+                                <!-- La classe dropdown-menu permet de faire disparaître les éléments du menu -->
+                                <div class="dropdown-menu"> 
+                                        <!-- la classe dropdown-menu permet de préparer le s éléments du menu :-->
+                                        <a class="dropdown-item" href="#"> Mr Berrada Driss </a>
+                                        <a class="dropdown-item" href="#"> Mr Zaryouch Mohammed </a>
+                                        <a class="dropdown-item "href="#"> Mr Hammad Lazrek </a>
+                                        <a class="dropdown-item" href="#">  Mr Belhabib Zouheir </a>
+                                </div>
+                        </li>
+
+                        <li> 
+                                <a class="nav-link text-light font-weight-bold text-uppercase px-3" 
+                                href="#"> Contact 
+                                </a>
+                        </li>
+            
+                </ul>
+                <!-- La classe "form-inline" permet d'avoir un formulaire avec la propriété display : flex : -->
+                <!-- ml-3 permet d'ajuster verticalement la zone de recherche avec les titres des menus : -->
+                <form class="form-inline ml-3">
+
+                        <!-- Pour regrouper input avec button, on va utiliser la classe "input-group" : -->
+                        <div class="input-group">
+
+                                <!-- Pour rendre la zone input un peu plus élégante, -->
+                                <!-- on va utiliser la classe form-control : -->
+                                <input type="text" class="form-control" placeholder="Rechercher"/>
+
+                                <!-- La classe "input-group-append" permet d'aligner input avec le bouton :-->
+                                <div class="input-group-append">
+                                        
+                                        <!-- Pour rendre le bouton de la recherche plus élégant, -->
+                                        <!-- on va utiliser la classe "btn" :-->
+                                        <!-- La propriété bg-light permet de donner une couleur grise claire à la zone de saisie :-->
+                                        <button input="button" class="btn bg-light"> <i class="fas fa-search text-muted"> </i> </button>
+                                        <!-- La propriété text-muted permet de donner un gris plus clair à l'icône -->
+                                </div>
+                        </div>
+                </form>
+                </div>
+        </nav>
+        <!-- Fin de la barre de navigation -->
+        
+        <!-- Début de la bannière -->
+        <section>
+                <div class="container-fluid"> <!-- Cette classe permet d'utiliser toute la largeur du navigateur -->
+                        <!-- La classe row permet de définir la ligne (row) avec une couleur bleue (bg-info)-->
+                        <!-- La classe style permet d'indiquer la largeur occupée par la ligne, ici, -->
+                        <!-- la ligne va occuper toute la largeur du navigateur avec height=100vh. -->
+                        <div    class="row bg-info justify-content-center align-items-center" 
+                                style="height:100vh">
+                                
+                                <!-- Ensuite, on va créer une colonne avec col, qui aura comme largeur = 10 :-->
+                                <div class="col-sm-10 text-center">
+
+                                        <!-- la classe="display-4" va augmenter la taille du titre :-->
+                                        <!-- la classe text-capitalize permet d'afficher le 1_ caractère -->
+                                        <!-- de chaque en majuscule : -->
+                                        <!-- La classe text-warning pour qu'il soit en jaune :-->
+                                        <h1     class="display-4 text-capitalize text-warning"> 
+                                                Bienvenus a mon site Web !  
+                                        </h1>
+                                        <h2 class="font-weight-light font-italic text-light"> 
+                                                J'espère que vous allez trouver votre bonheur ici !  
+                                        </h2>
+
+                                        <!-- btn-warning pour avoir la couleur jaune -->
+                                        <!-- btn-lg pour avoir un bouton large -->
+                                        <!-- px-4 pour ajouter du paddin = largeur-->
+                                        <!-- m-2 pour ajouter un marging :-->
+                                        <a      href="#" class="btn  font-weight-bold btn-warning btn-lg px-4 m-2"> 
+                                                Contactez-nous </a>
+
+                                        <!-- btn-danger pour avoir la couleur rouge :-->
+                                        <a      href="#" class="btn  font-weight-bold btn-danger btn-lg px-4 m-2"> 
+                                                Rejoignez-nous </a>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Fin de la bannière -->
+
+        <!-- Début de la partie Compétences -->
+        <!-- bg=background, light=grise, p-5=padding de 5 pixels pour l4 côtés -->
+        <section class="bg-light p-5">
+                <div class="container-fluid">
+                        <div class="row mb-5">
+                                <div class="col text-center">
+                                        <h1 class="text-warning font-weight-bold display-0"> Nos compétences </h1>
+                                        <p class="lead text-secondary">     
+                                                Notre équipe informatique est dotée des compétences variées,
+                                                ce qui nous permet de répondre le mieux aux attentes de nos clients.
+                                                Nous utilisons les dernières technologies dans nos processus de 
+                                                développement. Nous proposons des solutions informatiques très riches
+                                                en termes d'ergonomie.
+                                                
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="row text-center">
+
+                                <!-- Sur la même ligne, on va utiliser 3 éléments chaucun 4 colonnes :-->
+                                <!-- Ce qui fait un total de 12 colonnes :-->
+                                <!-- Chaque colonne va contenir une icône, un texte, un titre et un bouton :-->
+                                <!-- col-sm-10=cologne small de 10 pixels pour les petits écrans comme les GSM :-->
+                                <!-- mx-auto pour centrer le c ontenu :-->
+                                <div class="col-lg-4 col-sm-10 mx-auto mb-1"> 
+
+                                        <!-- fa-5x pour augmenter la  taille de l'icône : -->
+                                        <!-- mb-3 = mrgin bottom de 3 pixels : -->
+                                        <i class="fas fa-desktop text-warning fa-5x mb-3"> </i>
+                                        <h1 class="text-secondary font-weight-bold"> Notre vision </h1>
+                                        <!-- my-4 pour ajouter de l'espace autour du paragraphe :-->
+                                        <p class="text-justify text-muted my-3"> 
+                                                Nos missions sont variées : 
+                                                identifier et analyser les besoins des utilisateurs, 
+                                                présenter un projet au plus près des attentes du client, 
+                                                adapter les programmes informatiques aux besoins 
+                                                des utilisateurs.
+                                        </p>
+                                        <!-- outline pour avoir une couleur légère sur le bouton : -->
+                                        <a href="#" class="btn btn-outline-warning"> Lire plus ... </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-10 mx-auto mb-1"> 
+                                        <!-- fa-5x pour augmenter la  taille de l'icône : -->
+                                        <!-- mb-3 = mrgin bottom de 3 pixels : -->
+                                        <i class="fas fa-edit text-warning fa-5x mb-3"> </i>
+                                        <h1 class="text-secondary font-weight-bold"> Notre conception </h1>
+                                        <!-- my-3 pour ajouter de l'espace autour du paragraphe :-->
+                                        <p class="text-justify text-muted my-3"> 
+                                                Nous concevons nos produits en utilisant une technologie de pointe.
+                                                Nous veillons sur la qualité et le service de nos produits.
+                                                Nos solutions informatiques sont livrées à temps. 
+                                                Nous investissons dans nos ressources humaines.
+                                        </p>
+                                        <a href="#" class="btn btn-outline-warning"> Lire plus ... </a>
+                                </div>
+                                <div class="col-lg-4 col-sm-10 mx-auto mb-1"> 
+                                        <!-- fa-5x pour augmenter la  taille de l'icône : -->
+                                        <!-- mb-3 = mrgin bottom de 3 pixels : -->
+                                        <i class="fas fa-cogs text-warning fa-5x mb-3"> </i>
+                                        <h1 class="text-secondary font-weight-bold"> Notre créativité </h1>
+                                        <!-- my-3 pour ajouter de l'espace autour du paragraphe :-->
+                                        <p class="text-justify text-muted my-3"> 
+                                                Nous utilisons des processus d'innovation dans la création de nos projets.
+                                                Nous appliquons une stratégie de différenciation, ce qui nous permet de nous
+                                                démarquer par rapport à nos concurrents. Vous pouvez compter sur nous.
+                                        </p>
+                                        <a href="#" class="btn btn-outline-warning"> Lire plus ... </a>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Fin de la partie Compétences -->
+
+        <!-- Début de la partie des projets -->
+                <!-- class="p-5" pour ajouter un padding à la section -->
+                <section class="p-5">
+                        <div class="container-fluid">
+                                <div class="row mb-4">
+                                        <div class="col text-center">
+                                                <h1 class="text-warning font-weight-bold display-0"> Nos projets </h1>
+                                                <p class="lead text-secondary">     
+                                                        Nos projets sont réalisés à temps. Nous sommes en permanence à l'écoute de nos clients.
+                                                        Notre but est leur satisfaction. Nous leur apportons les solutions
+                                                        informatiques les plus adaptées à leurs besoins. Nous appliquons une stratégie orientée Client.
+                                                </p>
+                                        </div>
+                                </div> 
+                                <div class="row">
+                                        <!-- On a qutre projets, on va utiliser 3 colonnes pour chaque projet :-->
+                                        <!-- Si vous voulez afficher deux éléments sur la même largeur, utilisez : -->
+                                        <!-- col-lg-3 permet à un élement d'occuper 6 colonnes. -->
+                                        <!-- Le but est d'avoir deux éléments sur la même largeur lorsque -->
+                                        <!-- l'écran devient small. -->
+                                        <div class="col-lg-3 col-sm-6">
+                                                <!-- class="imgfluid" permet de réduire la taille de l'image :-->
+                                                <!-- img-rounded pour arrondir les coins de l'image :-->
+                                                <!-- img-rounded-circle permet d'arrondir en cercle. -->
+                                                <!-- img-thumbnail permet d'avoir un autre style d'image. -->
+                                                <!-- Avec img-thumbnail, vous pouvez ajouter mb-3 pour ajouter un margin pâr le bas. -->
+                                                <img src="images/ecommerce.jpg" class="img-thumbnail">
+                                                <!-- Avant text-warniong, vous pouvez ajouter my-3 pour ajuster les titres des images -->
+                                                <h2 class="my-3 text-warning"> E-Commerce</h2>
+                                                <p class="text-justify text-muted my-3"> 
+                                                        Il s'agit de la création d'un site web E-commerce qui a été conçu
+                                                        par Mr Zaryouch. Ce site est considéré comme une ébauche.
+                                                </p>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                                
+                                                <img src="images/gestion_ecole.jpg" class="img-thumbnail">
+                                                <h2 class="my-3 text-warning"> School </h2>
+                                                <p class="text-justify text-muted my-3"> 
+                                                        Il s'agit de la création d'un site web pour la gestion d'une école professionnelle.
+                                                        Il a a été conçu par Mr Zaryouch. 
+                                                </p>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                                <img src="images/CRM.jpg" class="img-thumbnail">
+                                                <h2 class="my-3 text-warning "> CRM</h2>
+                                                <p class="text-justify text-muted my-3"> 
+                                                        Il s'agit de la création d'un site web conçu pour la gestion de la relation des clients.
+                                                        Il est créé par Mr Berrada Driss. Il permet de gérer tout le système d'information d'une Entreprise.
+                                                </p>
+                                        </div>
+                                        <div class="col-lg-3 col-sm-6">
+                                                <img src="images/elearning.jpg" class="img-thumbnail">
+                                                <h2 class="my-3 text-warning "> E-Learning </h2>
+                                                <p class="text-justify text-muted my-3"> 
+                                                        Il s'agit de la création d'une plateforme conçue pour assurer un enseignement à distance.
+                                                </p>
+                                        </div>
+                                </div>
+                        </div>
+                </section>
+        <!-- Fin de la partie des projets -->
+
+        <!-- Début de la partie Equipe -->
+        <!-- On va commencer par l'ajout d'un padding de 5 pixels sur les quatre côtés, -->
+        <!-- mais à l'excception des écrans extra-small : on veut avoir un padding de 2 pixles. -->
+                <section class="p-sm-5 p-2 bg-secondary">
+                        <div class="container-fluid"> 
+                                <div class="row mb-4">
+                                        <div class="col text-center">
+                                                <h1 class="text-warning font-weight-bold display-0"> Nos équipes </h1>
+                                                <p class="lead text-light text-justify">     
+                                                        Nos équipes travaillent sur la réalisation des objectifs définis par nos clients à travers un cachier de charges. 
+                                                        Notre priorité est la satisfaction de nos clients. Notre devise est la communication entre les
+                                                        différents membres de nos équipes : savoir anticiper sur les éléments clés de la réussite d'un projet informatique.
+                                                </p>
+                                        </div>
+                                </div>
+                                <div class="row">
+                                        <!-- Pour les écrans Small : col-sm-10. Pour centrer : mx-auto. -->
+                                        <!-- Et pour le margin bottom : mb-2 (2 pixels). -->
+                                        <div class="col-lg-4 col-sm-10 mx-auto mb-2">
+                                                <div class="card">
+                                                        <img src="images/zaryouch.jpg" height="420" width="200" class="card-img-top">
+                                                        <div class="card-body">
+                                                                <div class="card-title">
+                                                                        <h3 class="text-muted"> Zaryouch Mohammed </h3>
+                                                                </div>
+                                                                <div class="card-subtitle">
+                                                                        <p class="text-muted lead"> 
+                                                                                Mr Zaryouch est l'un de nos meilleurs Consultants de nos équipes qui 
+                                                                                n'arrête pas de bosser sur les nouvelles technologies, ce qui lui permet 
+                                                                                d'être à la hauteur des exigences du marché. Il veille sur la valeur ajoutée
+                                                                                de notre Entreprise.
+                                                                        </p>
+                                                                </div>
+                                                                <div class="text-right"> 
+                                                                        <a href="https://www.facebook.com/home.php"> <i class="fab fa-facebook fa-2x mx-2 text-primary"> </i></a>
+                                                                        <a href="https://twitter.com/ZaryouchM"> <i class="fab fa-twitter fa-2x mx-2 text-info"> </i></a>
+                                                                        <a href="https://www.instagram.com/mohammedzaryouch/?hl=fr"> <i class="fab fa-instagram fa-2x mx-2 text-info"> </i></a>
+                                                                        <a href="https://www.youtube.com/user/zaryouch"> <i class="fab fa-youtube fa-2x mx-2 text-danger"> </i></a>
+                                                                </div>
+                                                        </div>
+                                                </div>               
+                                        </div>
+                                        <div class="col-lg-4 col-sm-10 mx-auto mb-2">
+                                                <div class="card">
+                                                        <img src="images/berrada.jpg" height="420" width="200" class="card-img-top">
+                                                        <div class="card-body">
+                                                                <div class="card-title">
+                                                                        <h3 class="text-muted"> Berrada Driss </h3>
+                                                                </div>
+                                                                <div class="card-subtitle">
+                                                                        <p class="text-muted lead"> 
+                                                                                Mr Berrada est un Chef de projet qui supervise tous nos projets. C'est lui
+                                                                                le Maestro de nos équipes. Il apporte tous les soutiens morales à nos équipes
+                                                                                et les encourage à se perfectionner grâce à ses méthodes de travail et de Coatching.
+                                                                        </p>
+                                                                </div>
+                                                                <div  class="text-right"> 
+                                                                        <a href="https://www.facebook.com/Driss.BERRADA5514"> <i class="fab fa-facebook fa-2x mx-2 text-primary"> </i></a>
+                                                                        <a href="#"> <i class="fab fa-twitter fa-2x mx-2 text-info"> </i></a>
+                                                                        <a href="#"> <i class="fab fa-youtube fa-2x mx-2 text-danger"> </i></a>
+                                                                </div>
+                                                        </div>
+                                                </div>
+                                        </div>
+                                        <div class="col-lg-4 col-sm-10 mx-auto mb-2">
+                                                <div class="card">
+                                                        <img src="images/lazrak.jpg" height="420" width="200" class="card-img-top">
+                                                        <div class="card-body">
+                                                                <div class="card-title">
+                                                                        <h3 class="text-muted"> Lazrak Hammad </h3>
+                                                                </div>
+                                                                <div class="card-subtitle">
+                                                                        <p class="text-muted lead"> 
+                                                                                Mr Lazrak est le porteur de nos projets. Vu sa qualité de communication
+                                                                                et sa capacité de convaincre nos clients, il est le fil conducteur entre nos équipes
+                                                                                et nos clients. Il instaure une confiance totale chez nos clients.
+                                                                                
+
+                                                                        </p>
+                                                                </div>
+                                                                <div  class="text-right"> 
+                                                                        <a href="https://www.facebook.com/hamada.lazrak"> <i class="fab fa-facebook fa-2x mx-2 text-primary"> </i></a>
+                                                                        <a href="#"> <i class="fab fa-twitter fa-2x mx-2 text-info"> </i></a>
+                                                                        <a href="#"> <i class="fab fa-youtube fa-2x mx-2 text-danger"> </i></a>
+                                                                </div>  
+                                                </div>
+                                        </div>               
+                                </div>
+                        </div>
+                </section>
+        <!-- Fin de la partie Equipe -->
+
+        <!-- Début de la partie Progression -->
+        <!-- Avec un padding de 5 pixles (p-5) sur les quatre côtés :-->
+        <section class="p-5">    
+                <div class="container-fluid"> 
+                        <div class="row mb-4">
+                                <div class="col text-center">
+                                        <h1 class="text-warning font-weight-bold display-0"> Nos progressions </h1>
+                                        <p class="lead text-secondary text-justify">     
+                                                Nos équipes travaillent sur la réalisation des objectifs définis par nos clients à travers un cachier de charges. 
+                                                Notre priorité est la satisfaction de nos clients. Notre devise est la communication entre les
+                                                différents membres de nos équipes : savoir anticiper sur les éléments clés de la réussite d'un projet informatique.
+                                        </p>
+                                </div>
+                        </div>
+                </div>
+                <!-- Insertion d'une ligne -->
+                <div class="row justify-content-center">
+                        <!-- Insertion d'un élément avec 6 colonnes : -->
+                        <div class="col-lg-6 col-sm-10 text-secondary">
+                                <h2> HTML </h2> 
+                                <!-- mb-3 : margin bottom de 3 pixels : -->
+                                <div class="progress bg-secondary mb-3"> 
+                                        <div class="progress-bar" style="width:60%">
+                                                60%
+                                        </div>
+                                </div>
+                                <h2> CSS </h2>
+                                <div class="progress bg-secondary mb-3"> 
+                                        <div class="progress-bar bg-danger" style="width:70%">
+                                                70%
+                                        </div>
+                                </div>
+                                <h2> JavaScript </h2>
+                                <div class="progress bg-secondary mb-3"> 
+                                        <div class="progress-bar bg-warning" style="width:75%">
+                                                75%
+                                        </div>
+                                </div>
+                                <h2> Bootstrap </h2>
+                                <div class="progress bg-secondary mb-3"> 
+                                        <div class="progress-bar bg-success" style="width:90%">
+                                                90%
+                                        </div>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Fin de la partie Progression -->
+
+        <!-- Début de la partie Contact -->
+        <section class="p-5 bg-light">
+                <div class="container-fluid">
+                        <div class="row mb-4">
+                                <div class="col text-center">
+                                        <h1 class="text-warning font-weight-bold display-0"> Contact </h1>
+                                        <p class="lead text-secondary text-justify">     
+                                                
+                                        </p>
+                                </div>
+                        </div>
+                        <div class="row justify-content-center">
+                                <!-- col-md-8 pour les écran médium (md) avec 8 pixels : -->
+                                <!-- col-sm-10 pour les écran Small (sm) avec 10 pixels : -->
+                                <div class="col-lg-6 col-md-8 col-sm-10">
+                                        <div class="text-center text-secondary">
+                                                <h2> Avez-vous une question ? </h2>
+                                                <p class="font-weight-bold text-info"> Restez à l'écoute ! </p>
+                                        </div>
+                                        <form class="text-muted" method="post" action="#">
+                                                <div class="form-group">
+                                                        <label for="nom"> Votre nom </label>
+                                                        <input type="text" class="form-control" id="nom" name="nom" required>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="email"> Votre adresse Email </label>
+                                                        <input type="email" class="form-control" id="email" name="email" required>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="objet"> Objet du message </label>
+                                                        <input type="text" class="form-control" id="objet" name="objet" required>
+                                                </div>
+                                                <div class="form-group">
+                                                        <label for="message"> Votre message </label>
+                                                        <textarea 
+                                                                class="form-control" id="message" rows="5" cols="30" name="message" required> 
+                                                        </textarea>
+                                                </div>
+                                                <!-- btn-block pour élargir le bouton Envoyer : -->
+                                                <button class="btn btn-info btn-block" type = "submit"> Envoyer </button>
+                                        </form>
+                                </div>
+                        </div>
+                </div>
+        </section>
+        <!-- Fin de la partie Contact -->
+
+        <!-- Début de la partie Footer -->
+        <footer class="bg-secondary">
+                <div class="contanier">
+                        <div class="row">
+                                <div class="col text-center">
+                                        <h1 class="text-white text-capitalize font-weight-light p-3">
+                                                zaryouch & compagnie
+                                        </h1>
+                                        <h3 class="text-light text-capitalize font-weight-light font-italic mb-6"> 
+                                        </h3>
+                                        <div  class="py-2"> 
+                                                <a href="#"> <i class="fab fa-facebook fa-2x text-primary mx-3"> </i></a>
+                                                <a href="#"> <i class="fab fa-google-plus fa-2x text-danger mx-3"> </i></a>
+                                                <a href="#"> <i class="fab fa-twitter fa-2x text-info mx-3"> </i></a>
+                                                <a href="#"> <i class="fab fa-youtube fa-2x text-danger mx-3"> </i></a>
+                                        </div>
+                                        <!-- Avec un padding du hatu et du bas (py-4) de 4 pixels :-->
+                                        <!-- m-0 = margin = 0. -->
+                                        <p class="text-light py-4 m-0">&copy; Copyright 2021 - tout droit reservé - </p>
+                                </div>
+                        </div>
+                </div>
+        </footer>
+        <!-- Fin de la partie Footer -->
+
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <!-- Les scripts suivants ont été copiés des sites -->
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+                integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+                crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+                integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+                crossorigin="anonymous">
+        </script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+                integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+                crossorigin="anonymous">
+        </script>
+  </body>
+</html>
